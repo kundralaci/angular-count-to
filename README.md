@@ -1,9 +1,4 @@
-# Angular Count-To
-
-This project is an animated counter for Angularjs. The directive counts from one number to another over a configured duration.
-[Demo](http://sparkalow.github.io/angular-count-to/)
-
-## How to use angular count-to
+## How to use angular count-to with easing and binded values
 
 
 Include the javascript file.
@@ -20,7 +15,7 @@ var myApp = angular.module('myApp', ['count-to']);
 
 Apply the directive to a dom element.
 ```
- <span count-to="{{countTo}}" value="{{countFrom}}" duration="4"></span>
+ <span count-to="newScore" count-from="score" duration="1" easing="2.0">{{score}}</span>
 ```
 
 
@@ -29,6 +24,6 @@ Apply the directive to a dom element.
 The following attributes can be set as numbers on the directive element.
 
 - ```count-to```  the number to count to.
-- ```value```  the number to start counting from.
+- ```count-from```  the number to start counting from.
 - ```duration```  how long the count should take in seconds.
-
+- ```easing```  the curve (below 1.0 its slow at the end, above 1.0 its slow at the beginning).
